@@ -1,0 +1,34 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`gob-page`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="gob-page">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'gob-page',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'gob-page',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
