@@ -1,10 +1,11 @@
 <link rel="import" href="../polymer/polymer.html">
-
+<link rel="import" href="../gob-facebook/gob-facebook.html">
+<link rel="import" href="../gob-facebook/gob-facebook-comments.html">
 <!--
 `gob-page`
 
 
-@demo demo/index.html 
+@demo demo/index.html
 -->
 
 <dom-module id="gob-page">
@@ -12,23 +13,48 @@
     <style>
       :host {
         display: block;
+        text-align: justify;
+      }
+
+      h2{
+        margin:0;
+      }
+
+      @media(max-width: 480px){
+        :host {
+          padding:0.5rem;
+        }
+      }
+
+      @media(min-width: 481px) {
+        :host {
+          width:480px;
+          padding:1rem 4rem;
+        }
+      }
+
+      @media(min-width: 800px) {
+        :host {
+          width:480px;
+          padding:2rem 6rem;
+        }
       }
     </style>
-    <h2>Hello [[prop1]]</h2>
+
+    <gob-facebook app-id="195598147512937" version="v2.8" language="en_Us">
+
+    <h2> [[title]] </h2>
+
+    <content></content>
+
+    <gob-facebook-comments></gob-facebook-comments>
+    
   </template>
 
   <script>
     Polymer({
 
-      is: 'gob-page',
-
-      properties: {
-        prop1: {
-          type: String,
-          value: 'gob-page',
-        },
-      },
-
+      is: 'gob-page'
     });
   </script>
 </dom-module>
