@@ -3,7 +3,8 @@
   "main": "gob-page.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0",
-    "gob-facebook": "ghost-of-breadam/gob-facebook"
+    "gob-facebook": "ghost-of-breadam/gob-facebook",
+    "gob-share": "ghost-of-breadam/gob-share"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
